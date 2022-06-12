@@ -9,6 +9,7 @@ pipeline {
                 withDockerContainer('maven:3.8-openjdk-8') {
                     //在maven中运行以下命令
                     sh 'mvn -v'
+                    sh 'ls -al'
                 }
             }
         }
