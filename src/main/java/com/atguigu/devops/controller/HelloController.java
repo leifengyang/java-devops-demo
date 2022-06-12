@@ -14,6 +14,6 @@ public class HelloController {
     public String sayHello(){
 
         String format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-        return "你好：现在是【"+format+"】";
+        return "你好：现在【"+format+"】";
     }
 }
