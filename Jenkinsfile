@@ -5,16 +5,19 @@ pipeline {
         stage('项目打包') {
             steps {
                 //步骤
+                sh 'echo 项目正在打包'
             }
         }
         stage('项目测试') {
             steps {
                 //
+                sh 'echo 项目正在测试'
             }
         }
         stage('项目部署') {
             steps {
                 //
+                sh 'echo 项目正在部署'
             }
         }
     }
