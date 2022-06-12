@@ -4,8 +4,12 @@ pipeline {
     stages {  //定义很多阶段
         stage('项目打包') {
             steps {
-                //步骤
+                //步骤  mvn clean package
                 sh 'echo 项目正在打包'
+                withDockerContainer('maven:3.8-openjdk-8') {
+                    //在maven中运行以下命令
+                    sh 'mvn -v'
+                }
             }
         }
         stage('项目测试') {
